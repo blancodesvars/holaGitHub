@@ -1,0 +1,35 @@
+---
+title: "Actividad 5, Rmarkdown en grupo"
+author: "Martín Gabriel Blanco Desvars"
+date: "2 de abril de 2018"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Incluir imagen
+
+![Chipa paraguaya](chipa.jpg)
+
+Elegí esta imagen porque esta semana santa no comí ninguna de las comidas tradicionales de mi país :( 
+
+## "Chunk con código de R"
+
+```  {r, echo = TRUE, fig.width = 5, fig.height = 5}
+
+ library(ggplot2)
+
+ ggplot(data=mpg)+ geom_point(mapping= aes(x=hwy , y= cty))+ theme(aspect.ratio=1)+ labs(x= "Highway miles per gallon" , y= "City miles per gallon" , title= "Gráfico de dispersión")
+ 
+```
+
+## Incluir tabla
+
+```  {r, echo = TRUE , results="asis"}
+
+library(xtable)
+tabla <- xtable(mpg[1:5,1:5])
+tabla
+```
