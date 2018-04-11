@@ -1,7 +1,7 @@
 ---
-title: "Actividad 5, Rmarkdown en grupo"
+title: "Actividad_5, Rmarkdown modificado"
 author: "Martín Gabriel Blanco Desvars"
-date: "2 de abril de 2018"
+date: "11 de abril de 2018"
 output: pdf_document
 ---
 
@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ![Chipa paraguaya](chipa.jpg)
 
-Elegí esta imagen porque esta semana santa no comí ninguna de las comidas tradicionales de mi país :( 
+ Elegí esta imagen porque en semana santa no comí comidas tradicionales de mi país :( MODIFICADO
 
 ## "Chunk con código de R"
 
@@ -30,6 +30,8 @@ Elegí esta imagen porque esta semana santa no comí ninguna de las comidas trad
 ```  {r, echo = TRUE , results="asis"}
 
 library(xtable)
+
 tabla <- xtable(mpg[1:5,1:5])
 tabla
 ```
+Modificado!!
